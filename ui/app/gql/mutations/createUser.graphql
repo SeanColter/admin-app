@@ -1,0 +1,17 @@
+#import 'admin-app/gql/fragments/user-fragment'
+
+mutation(
+  $email: String,
+  $username: String,
+  $role: Role,
+  $active: Boolean
+) {
+  createUser(
+    email: $email,
+    username: $username,
+    role: $role,
+    active: $active
+  ) {
+    ...UserFragment
+  }
+}

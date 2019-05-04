@@ -1,0 +1,27 @@
+label {
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+input,
+select {
+  color: $font-color;
+  background: none;
+  border: none;
+  border-bottom: 1px solid $border-color;
+  border-radius: 0;
+  padding: 0.5rem;
+  font-size: 1rem;
+
+  &[type="radio"] {
+    border: initial;
+  }
+
+  &[type="file"] {
+    display: none;
+  }
+}
+
+input[type="submit"] {
+  background: $primary-color;
+}

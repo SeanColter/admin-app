@@ -1,0 +1,37 @@
+<h2>
+  User List
+  <small>
+    {{#link-to 'users.user' 'new' tagName="button" class="primary"}}
+      + New User
+    {{/link-to}}
+  </small>
+</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>id</th>
+      <th>username</th>
+      <th>email</th>
+      <th>role</th>
+      <th>active</th>
+    </tr>
+  </thead>
+  <tbody class="row-links">
+    {{#each model as |user|}}
+      {{#link-to 'users.user' user.id tagName="tr"}}
+        <td>{{user.id}}</td>
+        <td>{{user.username}}</td>
+        <td>{{user.email}}</td>
+        <td>{{user.role}}</td>
+        <td>
+          {{#if user.active}}
+            &check;
+          {{else}}
+            &times;
+          {{/if}}
+        </td>
+      {{/link-to}}
+    {{/each}}
+  </tbody>
+</table>

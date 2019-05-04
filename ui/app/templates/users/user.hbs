@@ -1,0 +1,36 @@
+<h2>
+  {{#if (eq model.id 'new')}}
+    New User
+  {{else}}
+    User Management
+  {{/if}}
+</h2>
+
+<form onsubmit={{action 'save'}}>
+  <label>
+    Username
+    {{input name="username" type="text" value=model.username}}
+  </label>
+
+  <label>
+    Email
+    {{input name="email" type="email" value=model.email}}
+  </label>
+
+  <label>
+    Role
+    <select name="role">
+      <option value="VIEWER">Viewer</option>
+      <option value="REGULAR">Regular</option>
+      <option value="ADMIN">Admin</option>
+    </select>
+  </label>
+
+  <label>
+    {{input name="active" type="checkbox" checked=model.active}}
+    Active
+  </label>
+
+  <button {{action 'cancel'}}>Cancel</button>
+  <input type="submit" value="Save">
+</form>

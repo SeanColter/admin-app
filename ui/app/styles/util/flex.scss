@@ -1,0 +1,43 @@
+.flex-row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+
+  &.flex-reverse {
+    flex-direction: row-reverse;
+  }
+}
+
+.flex-column {
+  display: flex;
+  flex-basis: 100%;
+  flex-direction: column;
+
+  &.flex-reverse {
+    flex-direction: column-reverse;
+  }
+}
+
+.flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.flex-item {
+  @include large-screen {
+    min-width: initial;
+    flex-grow: 0;
+    min-width: 32%;
+    max-width: 32%;
+  }
+
+  flex-grow: 1;
+  margin-bottom: .5rem;
+  min-width: 100%;
+}
+
+.space-between {
+  justify-content: space-between;
+}

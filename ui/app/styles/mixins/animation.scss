@@ -1,0 +1,6 @@
+@mixin animation($name: fadeIn, $duration: 1s, $delay: 0s, $fillMode: both) {
+  animation-name: $name;
+  animation-duration: $duration;
+  animation-delay: $delay;
+  animation-fill-mode: $fillMode;
+}

@@ -1,0 +1,7 @@
+#import 'admin-app/gql/fragments/user-fragment'
+
+query($email: String!, $password: String!) {
+  authenticate(email: $email, password: $password) {
+    ...UserFragment
+  }
+}

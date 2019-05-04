@@ -1,0 +1,9 @@
+a {
+  color: $primary-color;
+  text-decoration: none;
+  cursor: pointer;
+
+  &:focus {
+    border-bottom: 1px solid $border-color;
+  }
+}

@@ -1,0 +1,7 @@
+#import 'admin-app/gql/fragments/user-fragment'
+
+query($id: String!) {
+  user(id: $id) {
+    ...UserFragment
+  }
+}

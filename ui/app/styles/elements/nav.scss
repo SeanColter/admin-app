@@ -1,0 +1,15 @@
+nav {
+  a {
+    padding: 0.5rem;
+    display: inline-block;
+    color: $font-color;
+
+    &.active {
+      border-bottom: 1px solid $border-color;
+    }
+
+    &:focus {
+      border-bottom: 3px solid $border-color;
+    }
+  }
+}

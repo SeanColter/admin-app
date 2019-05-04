@@ -1,0 +1,6 @@
+.grid-container {
+  display: grid;
+  grid-gap: .5rem;
+  grid-template-columns: repeat(auto-fill, minmax(2fr, 5fr));
+  // grid-template-rows: repeat(100px, minmax(100%, 2fr))
+}

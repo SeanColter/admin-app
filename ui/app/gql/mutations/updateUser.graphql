@@ -1,0 +1,19 @@
+#import 'admin-app/gql/fragments/user-fragment'
+
+mutation(
+  $id: String,
+  $email: String,
+  $username: String,
+  $role: Role,
+  $active: Boolean
+) {
+  updateUser(
+    id: $id,
+    email: $email,
+    username: $username,
+    role: $role,
+    active: $active
+  ) {
+    ...UserFragment
+  }
+}
