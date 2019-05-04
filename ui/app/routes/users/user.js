@@ -20,18 +20,18 @@ export default Route.extend(RouteQueryManager, {
       return { id };
     }
     else {
-      // return get(this, 'apollo').watchQuery({
-      //   query,
-      //   variables: { id }
-      // });
+      return get(this, 'apollo').watchQuery({
+        query,
+        variables: { id }
+      });
 
-      return {
-        id: '1',
-        username: 'alice',
-        email: 'alice@alice.ca',
-        role: 'ADMIN',
-        active: true
-      };
+      // return {
+      //   id: '1',
+      //   username: 'alice',
+      //   email: 'alice@alice.ca',
+      //   role: 'ADMIN',
+      //   active: true
+      // };
     }
   }
 });

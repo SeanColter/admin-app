@@ -16,37 +16,37 @@ export default Route.extend(RouteQueryManager, {
   },
 
   model() {
-    // return get(this, 'apollo').watchQuery({ query });
+    return get(this, 'apollo').watchQuery({ query });
 
-    return [
-      {
-        id: '1',
-        username: 'alice',
-        email: 'alice@alice.ca',
-        role: 'ADMIN',
-        active: true
-      },
-      {
-        id: '2',
-        username: 'bob',
-        email: 'bob@bob.ca',
-        role: 'REGULAR',
-        active: true
-      },
-      {
-        id: '3',
-        username: 'charles',
-        email: 'charles@charles.ca',
-        role: 'VIEWER',
-        active: true
-      },
-      {
-        id: '4',
-        username: 'damien',
-        email: 'damien@damien.ca',
-        role: 'REGULAR',
-        active: false
-      }
-    ];
+    // return [
+    //   {
+    //     id: '1',
+    //     username: 'alice',
+    //     email: 'alice@alice.ca',
+    //     role: 'ADMIN',
+    //     active: true
+    //   },
+    //   {
+    //     id: '2',
+    //     username: 'bob',
+    //     email: 'bob@bob.ca',
+    //     role: 'REGULAR',
+    //     active: true
+    //   },
+    //   {
+    //     id: '3',
+    //     username: 'charles',
+    //     email: 'charles@charles.ca',
+    //     role: 'VIEWER',
+    //     active: true
+    //   },
+    //   {
+    //     id: '4',
+    //     username: 'damien',
+    //     email: 'damien@damien.ca',
+    //     role: 'REGULAR',
+    //     active: false
+    //   }
+    // ];
   }
 });
